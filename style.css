@@ -467,7 +467,7 @@ body {
     color: #333;
     display: inline-block;
     margin-top: 1rem;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1.5rem;
     background: #ffa500;
     border: 0.2rem solid #ffa500;
     border-radius: 5rem;
@@ -486,7 +486,7 @@ body {
 }
 
 .item {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #efefef;
     display: inline-block;
     margin: 0 1rem;
@@ -502,9 +502,9 @@ body {
 
 .wrapmoon {
     position: absolute;
-    right: 20%;
-    width: 40px;
-    height: 40px;
+    right: 21%;
+    width: 25px;
+    height: 25px;
     padding: 5px;
     border: 1px solid #ffa500;
     border-radius: 50%;
@@ -627,7 +627,7 @@ section {
 
 .about .content p {
     padding: 1rem 0;
-    font-size: 1.1em;
+    font-size: 1em;
     color: #555;
     line-height: 2;
 }
@@ -712,15 +712,18 @@ input[type="radio"]:checked ~ .controls3 {
 }
 
 .heading h1 {
-    font-size: 4rem;
+    font-size: 3.4rem;
     color: #333;
 }
 
-.destination .box .content {
+.destination .box {
     position: relative;
+}
+
+.destination .box .content {
     padding: 2rem;
     background: #fff;
-    height: 380px;
+    min-height: 380px;
 }
 
 .box .content .h3 {
@@ -838,13 +841,18 @@ input[type="radio"]:checked ~ .controls3 {
 }
 
 .review .content span h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #ffa500;
     text-align: start;
 }
 
+.info h3,
+.info span {
+    font-size: 0.9em;
+}
+
 .review .content p {
-    font-size: 1.4em;
+    font-size: 0.9em;
     color: #555;
     font-weight: 600;
     padding: 1rem 0;
@@ -865,7 +873,7 @@ input[type="radio"]:checked ~ .controls3 {
 }
 
 .review .box-container .box p {
-    font-size: 1.4em;
+    font-size: 0.9em;
     font-weight: 600;
     padding-bottom: 1rem;
     line-height: 2;
@@ -980,7 +988,7 @@ h3,
     color: #ffa500;
 }
 .banner .content h3 {
-    font-size: 4.5rem;
+    font-size: 4rem;
     color: #fff;
     margin-top: 1rem;
 }
@@ -988,7 +996,7 @@ h3,
 .banner .content p {
     max-width: 60rem;
     margin: 1rem auto;
-    font-size: 1em;
+    font-size: 0.9em;
     color: #eee;
     line-height: 2;
 }
@@ -1043,7 +1051,7 @@ h3,
 }
 
 .footer .box-container .box h3 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color: #fff;
     padding: 1rem 0;
 }
@@ -1101,4 +1109,161 @@ hr {
 
 .credit span {
     color: #ffa500;
+}
+
+.fa-moon {
+    font-size: 15px;
+}
+
+@media screen and (min-width: 1200px) {
+    .col-xl-3 {
+        flex-basis: calc(100% / 12 * 3 - 40px / 12 * 3);
+    }
+
+    .col-xl-4 {
+        flex-basis: calc(100% / 12 * 4 - 30px / 12 * 4);
+    }
+
+    .box-container {
+        gap: 10px;
+    }
+    .col-xl-6 {
+        flex-basis: calc(100% / 12 * 6 - 20px / 12 * 6);
+    }
+
+    .review {
+        gap: 60px;
+    }
+
+    .map {
+        gap: 20px;
+    }
+
+    .about {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .wrapmoon {
+        right: 23%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .col-lg-4 {
+        flex-basis: calc(100% / 12 * 4 - 30px / 12 * 4);
+    }
+
+    .box-container {
+        gap: 10px;
+    }
+
+    .col-lg-6 {
+        flex-basis: calc(100% / 12 * 6 - 20px / 12 * 6);
+    }
+
+    .review {
+        gap: 50px;
+    }
+
+    .map {
+        gap: 20px;
+    }
+
+    .about {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .col-lg-6 {
+        flex-basis: calc(100% / 12 * 6 - 20px / 12 * 6);
+    }
+
+    section {
+        padding: 3rem 4rem;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    .wrapmoon {
+        right: 19%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .col-md-12 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .col-md-6 {
+        flex-basis: calc(100% / 12 * 6 - 30px / 12 * 6);
+    }
+
+    .review {
+        gap: 0;
+    }
+
+    input:checked ~ .navbar {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background: #222222e6;
+        top: 100%;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        right: 0%;
+        transition: all 0.3s linear;
+    }
+
+    .item {
+        padding: 10px;
+    }
+
+    .wrapmoon {
+        right: 30%;
+    }
+
+    .header #menu-btn {
+        display: block;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .col-sm-6 {
+        flex-basis: calc(100% / 12 * 6 - 20px / 12 * 6);
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    .col-sm-12 {
+        flex-basis: 100%;
+    }
+
+    .wrapmoon {
+        right: 36%;
+    }
+
+    .destination .box .content {
+        min-height: 240px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .wrapmoon {
+        right: 38%;
+    }
 }
