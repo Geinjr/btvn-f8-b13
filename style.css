@@ -1115,6 +1115,10 @@ hr {
     font-size: 15px;
 }
 
+.label {
+    display: none;
+}
+
 @media screen and (min-width: 1200px) {
     .col-xl-3 {
         flex-basis: calc(100% / 12 * 3 - 40px / 12 * 3);
@@ -1195,6 +1199,9 @@ hr {
 }
 
 @media screen and (max-width: 768px) {
+    .label {
+        display: block;
+    }
     .col-md-12 {
         flex-basis: 100%;
         max-width: 100%;
